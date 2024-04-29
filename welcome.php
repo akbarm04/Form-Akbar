@@ -41,7 +41,22 @@
 </head>
 <body>
     <div class="card">
-        <h1 style="font-family:'Times New Roman', Times, serif;">SELAMAT DATANG!</h1>
+        <h1 style="font-family:'Times New Roman', Times, serif;">SELAMAT DATANG! <?php echo $_GET["fname"];?> <?php echo $_GET["lname"];?></h1>
+        <h3 style="font-family: 'Poppins';">Jenis Kelamin kamu adalah<?php echo " " . $_GET["gender"];?></h3>
+        <h3 style="font-family: 'Poppins';">Dengan Kewarganegaraan<?php echo " " . $_GET["nationality"];?></h3>
+        <h3 style="font-family: 'Poppins';">Dan <?php
+        if(isset($_GET['language'])) {
+            $languages = $_GET['language'];
+            echo "menggunakan bahasa ";
+            foreach($languages as $language) {
+                echo $language . " ";
+            }
+            echo "<br>";
+        } else {
+            echo "Anda belum memilih bahasa<br>";
+        }
+    ?></h3>
+        <h3 style="font-family: 'Poppins';">Bio mu : <?php echo $_GET["bio"];?></h3>
         <h3 style="font-family: 'Poppins';">Terimakasih telah bergabung di Website Kami, Media Belajar Kita Bersama</h3>
     </div>
 </body>

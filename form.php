@@ -81,15 +81,15 @@
 <body>
     <h1 style="font-family: 'Poppins';">Buat Account Baru</h1>
     <h3 style="font-family: 'Times New Roman', Times, serif;">Sign Up Form</h3>
-    <form action="welcome.html" method="get">
+    <form action="welcome.php" method="get">
     <label for="fname" style="color: #ffffff;">First Name :</label> <br> 
-    <input type="text" id="fname" required> <br> <br>
+    <input type="text" id="fname" name="fname" required> <br> <br>
     <label for="lname" style="color: #fff;">Last Name :</label> <br>
-    <input type="text" id="lname" required>
+    <input type="text" id="lname" name="lname" required>
     <p style="color: #fff;">Gender</p>
-    <input type="radio" id="male" name="gender" value="male" required>
+    <input type="radio" id="male" name="gender" value="Laki-laki" required>
     <label for="male" style="color:#fff;">Male</label> <br>
-    <input type="radio" id="female" name="gender" value="female" required>
+    <input type="radio" id="female" name="gender" value="Perempuan" required>
     <label for="female" style="color: #fff;">Female</label>
     <p style="color: #fff;">Nationality</p>
     <select name="nationality" id="" >
@@ -99,13 +99,13 @@
         <option value="english">Klari City</option>
     </select>
     <p style="color: #fff;">Language Spoken</p>
-    <input type="checkbox" id="indo" name="language">
+    <input type="checkbox" id="indo" name="language[]" value="Indonesia">
     <label for="indo" style="color: #fff;">Bahasa Indonesia</label> <br>
-    <input type="checkbox" id="english" name="language"> 
+    <input type="checkbox" id="english" name="language[]" value="Inggris"> 
     <label for="english" style="color: #fff;">English Language</label> <br>
-    <input type="checkbox" id="sunda" name="language"> 
+    <input type="checkbox" id="sunda" name="language[]" value="Sunda"> 
     <label for="sunda" style="color: #fff;">Basa Sunda</label> <br>
-    <input type="checkbox" id="other" name="language"> 
+    <input type="checkbox" id="other" name="language[]"> 
     <label for="other" style="color: #fff;">Other</label>
     <p style="color: #fff;">Bio</p> 
     <textarea name="bio" id="" cols="30" rows="10"></textarea><br>
